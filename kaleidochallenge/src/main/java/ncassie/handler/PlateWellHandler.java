@@ -75,7 +75,7 @@ public class PlateWellHandler {
         } else{
             for(String wellId : newWellIds){
                 if(!wells.containsKey(wellId)){
-                    System.out.println("Cannot add compound to well " + wellId + "because well is not registered");
+                    System.out.println("Cannot add compound to well " + wellId + " because well is not registered");
                 } else{
                     addCompoundToWell(wells.get(initialWellId).getWellCompound().getCompoundId(), wellId);
                 }

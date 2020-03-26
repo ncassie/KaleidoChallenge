@@ -20,11 +20,10 @@ public class App
         plateWellHandler.registerCompound("S");
 
         plateWellHandler.addPlate("P-12345");
-        plateWellHandler.addPlate("P3");
-        plateWellHandler.addPlate("P7");
+        plateWellHandler.addPlate("P-3");
+        plateWellHandler.addPlate("P-7");
 
         Hashtable<String, Well> testWells = plateWellHandler.getWells();
-        testWells.forEach((s, w) -> System.out.println("key: " + s + " value: " + w.toString()));
 
         plateWellHandler.addCompoundToWell("S", "P-12345.A1");
 
