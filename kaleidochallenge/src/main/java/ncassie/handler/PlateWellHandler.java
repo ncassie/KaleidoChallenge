@@ -4,6 +4,7 @@ import ncassie.domain.Compound;
 import ncassie.domain.Plate;
 import ncassie.domain.Well;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 /**
@@ -43,6 +44,11 @@ public class PlateWellHandler {
         wells.putAll(plates.get(plateId).getPlateWells());
     }
 
+    /**
+     * Allows compound to be added to a well
+     * @param compoundId - compound to be added to well
+     * @param wellId - well to add compound to
+     */
     public void addCompoundToWell(String compoundId, String wellId){
         if(compounds.containsKey(compoundId) && wells.containsKey(wellId)){
             try{
@@ -53,6 +59,31 @@ public class PlateWellHandler {
 
         } else{
             System.out.println("Could not add compound to well.  Either Compound or Well has not been registered.");
+        }
+    }
+
+    /**
+     * Allows contents of one well to be split to different wells.
+     * Assumption is that original well's contents cannot be completely emptied, so don't need to alter contents of original well.
+     * @param initialWellId
+     * @param newWellIds
+     */
+    public void splitCompoundToAdditionalWells(String initialWellId, ArrayList<String> newWellIds){
+        if((!wells.containsKey(initialWellId)) || (wells.get(initialWellId).getWellCompound() == null)){
+            System.out.println("Cannot split well.  Well not registered or does not contain any contents");
+        } else{
+            for(String wellId : newWellIds){
+                if(!wells.containsKey(wellId)){
+                    System.out.println("Cannot add compound to well " + wellId + "because well is not registered");
+                } else{
+                    try{
+                        wells.get(wellId).setWellCompound(compounds.get(initialWellId));
+                    } catch (Exception e){
+                        System.out.println("Cannot add compound to well" + wellId + ". " + e);
+                    }
+
+                }
+            }
         }
     }
 
