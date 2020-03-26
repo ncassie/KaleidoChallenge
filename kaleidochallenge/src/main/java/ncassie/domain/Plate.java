@@ -11,20 +11,20 @@ public class Plate {
         plateWells = new Hashtable<String, Well>();
 
         // Assumption is that plates are standardized and come as described in problem set
-        plateWells.put(plateId + "A1", null);
-        plateWells.put(plateId + "A2", null);
-        plateWells.put(plateId + "A3", null);
-        plateWells.put(plateId + "A4", null);
+        plateWells.put(plateId + "A1", new Well(plateId + "A1"));
+        plateWells.put(plateId + "A2", new Well(plateId + "A2"));
+        plateWells.put(plateId + "A3", new Well(plateId + "A3"));
+        plateWells.put(plateId + "A4", new Well(plateId + "A4"));
 
-        plateWells.put(plateId + "B1", null);
-        plateWells.put(plateId + "B2", null);
-        plateWells.put(plateId + "B3", null);
-        plateWells.put(plateId + "B4", null);
+        plateWells.put(plateId + "B1", new Well(plateId + "B1"));
+        plateWells.put(plateId + "B2", new Well(plateId + "B2"));
+        plateWells.put(plateId + "B3", new Well(plateId + "B3"));
+        plateWells.put(plateId + "B4", new Well(plateId + "B4"));
 
-        plateWells.put(plateId + "C1", null);
-        plateWells.put(plateId + "C2", null);
-        plateWells.put(plateId + "C3", null);
-        plateWells.put(plateId + "C4", null);
+        plateWells.put(plateId + "C1", new Well(plateId + "C1"));
+        plateWells.put(plateId + "C2", new Well(plateId + "C2"));
+        plateWells.put(plateId + "C3", new Well(plateId + "C3"));
+        plateWells.put(plateId + "C4", new Well(plateId + "C4"));
 
     }
 
