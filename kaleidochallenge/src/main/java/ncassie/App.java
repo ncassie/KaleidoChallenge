@@ -1,8 +1,10 @@
 package ncassie;
 
+import ncassie.domain.Well;
 import ncassie.handler.PlateWellHandler;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
@@ -20,6 +22,9 @@ public class App
         plateWellHandler.addPlate("P-12345");
         plateWellHandler.addPlate("P3");
         plateWellHandler.addPlate("P7");
+
+        Hashtable<String, Well> testWells = plateWellHandler.getWells();
+        testWells.forEach((s, w) -> System.out.println("key: " + s + " value: " + w.toString()));
 
         plateWellHandler.addCompoundToWell("S", "P-12345.A1");
 

@@ -91,5 +91,8 @@ public class PlateWellHandler {
         }
     }
 
-
+    //**** FOR TESTING ONLY ***///
+    public Hashtable<String, Well> getWells() {
+        return wells;
+    }
 }
