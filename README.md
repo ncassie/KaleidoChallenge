@@ -17,6 +17,8 @@ One Unit test has been created and can be run using:
 	
 Additional unit tests can be added and run the same way.
 
+The program was written on Windows, but because it is in Java it should be able to be built and run on any OS.
+
 Please let me know if you have any questions.
 	
 
