@@ -24,6 +24,7 @@ public class PlateWellHandler {
     public PlateWellHandler() {
         this.compounds = new Hashtable<String, Compound>();
         this.plates = new Hashtable<String, Plate>();
+        this.wells = new Hashtable<String, Well>();
     }
 
     /**
