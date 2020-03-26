@@ -27,4 +27,8 @@ public class Plate {
         plateWells.put("C4", null);
 
     }
+
+    public Hashtable<String, Well> getPlateWells() {
+        return plateWells;
+    }
 }
