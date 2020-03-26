@@ -11,20 +11,20 @@ public class Plate {
         plateWells = new Hashtable<String, Well>();
 
         // Assumption is that plates are standardized and come as described in problem set
-        plateWells.put("A1", null);
-        plateWells.put("A2", null);
-        plateWells.put("A3", null);
-        plateWells.put("A4", null);
+        plateWells.put(plateId + "A1", null);
+        plateWells.put(plateId + "A2", null);
+        plateWells.put(plateId + "A3", null);
+        plateWells.put(plateId + "A4", null);
 
-        plateWells.put("B1", null);
-        plateWells.put("B2", null);
-        plateWells.put("B3", null);
-        plateWells.put("B4", null);
+        plateWells.put(plateId + "B1", null);
+        plateWells.put(plateId + "B2", null);
+        plateWells.put(plateId + "B3", null);
+        plateWells.put(plateId + "B4", null);
 
-        plateWells.put("C1", null);
-        plateWells.put("C2", null);
-        plateWells.put("C3", null);
-        plateWells.put("C4", null);
+        plateWells.put(plateId + "C1", null);
+        plateWells.put(plateId + "C2", null);
+        plateWells.put(plateId + "C3", null);
+        plateWells.put(plateId + "C4", null);
 
     }
 
