@@ -1,20 +1,16 @@
 package ncassie;
 
-import ncassie.domain.Well;
+
 import ncassie.handler.PlateWellHandler;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class PlateWellHandlerTest {
+
+    @Test
+    public void testPlateWellHandler(){
         PlateWellHandler plateWellHandler = new PlateWellHandler();
 
         plateWellHandler.registerCompound("S");
@@ -31,6 +27,7 @@ public class App
         newWells.add("P-7.A4");
 
         plateWellHandler.splitCompoundToAdditionalWells("P-12345.A1", newWells);
-        System.out.println(plateWellHandler.getCompoundIdByWellId("P-7.A4"));
+        assertEquals(plateWellHandler.getCompoundIdByWellId("P-7.A4"), "S");
     }
+
 }
