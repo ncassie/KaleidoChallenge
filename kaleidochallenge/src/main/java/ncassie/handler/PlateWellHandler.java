@@ -76,12 +76,7 @@ public class PlateWellHandler {
                 if(!wells.containsKey(wellId)){
                     System.out.println("Cannot add compound to well " + wellId + "because well is not registered");
                 } else{
-                    try{
-                        wells.get(wellId).setWellCompound(compounds.get(initialWellId));
-                    } catch (Exception e){
-                        System.out.println("Cannot add compound to well" + wellId + ". " + e);
-                    }
-
+                    addCompoundToWell(wells.get(initialWellId).getWellCompound().getCompoundId(), wellId);
                 }
             }
         }

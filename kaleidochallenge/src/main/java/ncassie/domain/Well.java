@@ -35,4 +35,5 @@ public class Well {
     public Compound getWellCompound() {
         return wellCompound;
     }
+
 }
