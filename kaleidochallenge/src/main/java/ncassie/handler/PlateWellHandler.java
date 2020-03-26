@@ -82,5 +82,13 @@ public class PlateWellHandler {
         }
     }
 
+    public String getCompoundIdByWellId(String wellId){
+        if(!wells.containsKey(wellId)){
+            return "Well is not registered";
+        } else{
+            return wells.get(wellId).getWellCompound().getCompoundId();
+        }
+    }
+
 
 }
