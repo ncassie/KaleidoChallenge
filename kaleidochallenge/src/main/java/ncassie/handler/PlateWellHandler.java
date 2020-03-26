@@ -54,6 +54,7 @@ public class PlateWellHandler {
         if(compounds.containsKey(compoundId) && wells.containsKey(wellId)){
             try{
                 wells.get(wellId).setWellCompound(compounds.get(compoundId));
+                compounds.get(compoundId).addCompoundWell(wells.get(wellId));
             } catch (Exception e){
                 System.out.println(e);
             }
